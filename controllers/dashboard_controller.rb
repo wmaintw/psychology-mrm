@@ -3,6 +3,6 @@ get '/dashboard' do
     redirect to(:login)
   else
     @users = User.all
-    erb :'users/users', :layout => :main, :locals => {:users => @users}
+    erb :'dashboard/dashboard', :layout => :main, :locals => {:current_user => session[:current_user]}
   end
 end

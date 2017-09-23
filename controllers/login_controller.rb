@@ -9,10 +9,13 @@ post '/login' do
 
   encrypted_password = Digest::SHA512.hexdigest password
   user_in_db = User.first(:username => username, :password => encrypted_password)
+  password = ''
+  encrypted_password = ''
 
   if user_in_db == nil
     return_page(:'login/login', 'Login failed!')
   else
+    user_in_db.password = ''
     session[:current_user] = user_in_db
     redirect to(:dashboard)
   end
