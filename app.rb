@@ -11,6 +11,15 @@ require './utils/utils.rb'
 
 enable :sessions
 
+before '/*' do
+  if !['/', '/login', '/logout', '/register'].include?(request.path)
+    if !is_logged_in?
+      redirect to(:login)
+      halt
+    end
+  end
+end
+
 get '/' do
   redirect to(:login)
 end
