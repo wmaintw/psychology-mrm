@@ -3,8 +3,8 @@ helpers do
     erb page, :layout => :main, :locals => {:message => message}
   end
 
-  def is_valid_input_for_login(username, password)
-    return is_not_empty(username) && is_not_empty(password)
+  def is_empty(param)
+    params == nil or param.empty?
   end
 
   def is_not_empty(param)
