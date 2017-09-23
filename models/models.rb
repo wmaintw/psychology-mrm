@@ -9,10 +9,10 @@ class User
 
   property :id,         Serial
   property :username,   String
-  property :password,   String
+  property :password,   String, :length => 128
   property :name,       String
 end
 
 DataMapper.finalize
-#DataMapper.auto_migrate!
+# DataMapper.auto_migrate!
 DataMapper.auto_upgrade!
