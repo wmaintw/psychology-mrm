@@ -7,7 +7,7 @@ require './controllers/dashboard_controller.rb'
 require './controllers/user_controller.rb'
 require './services/user_service.rb'
 require './models/models.rb'
-require './utils.rb'
+require './utils/utils.rb'
 
 enable :sessions
 
