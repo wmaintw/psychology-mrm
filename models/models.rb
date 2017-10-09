@@ -18,28 +18,28 @@ class Lead
 
   property :id,                     Serial
   property :mobile,                 String, :length => 18
-  property :initial_contact_at      DateTime
+  property :initial_contact_at,     DateTime
   property :name,                   String, :length => 12
   property :gender,                 String, :length => 4
-  property :statement_by_visitor    Text
-  property :initial_problem         Text
-  property :respond_to_problem      Text
-  property :affected_by_problem     Text
+  property :statement_by_visitor,   Text
+  property :initial_problem,        Text
+  property :respond_to_problem,     Text
+  property :affected_by_problem,    Text
 
   property :age,                    Integer
   property :marital_status,         String
   property :has_children,           String
-  property :ethnic                  String
-  property :occupation              String
-  property :education               String
+  property :ethnic,                 String
+  property :occupation,             String
+  property :education,              String
 
-  property :referral                Boolean, :default => false
-  property :referral_comments       Text
-  property :comments                Text
+  property :referral,               Boolean, :default => false
+  property :referral_comments,      Text
+  property :comments,               Text
 
-  property :booking_sms_sent        Boolean, :default => false
-  property :status                  String
-  property :active                  Boolean, :default => true
+  property :booking_sms_sent,       Boolean, :default => false
+  property :status,                 String
+  property :active,                 Boolean, :default => true
 end
 
 DataMapper.finalize
