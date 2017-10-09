@@ -18,6 +18,7 @@ class Lead
 
   property :id,                     Serial
   property :mobile,                 String, :length => 18
+  property :tel,                    String, :length => 18
   property :initial_contact_at,     DateTime
   property :name,                   String, :length => 12
   property :gender,                 String, :length => 4
